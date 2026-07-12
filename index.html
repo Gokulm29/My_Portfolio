@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokul M — Machine Learning Engineer &amp; Data Scientist</title>
+<meta name="description" content="Portfolio of Gokul M, a Machine Learning Engineer and Data Scientist specializing in multi-agent LLM systems, deep learning and MLOps pipelines.">
+<meta name="keywords" content="Gokul M, Machine Learning Engineer, Data Scientist, Data Engineer, AI, MLOps, LangChain, CrewAI, Chennai">
+<meta name="author" content="Gokul M">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gokul M — Machine Learning Engineer & Data Scientist">
+<meta property="og:description" content="Building intelligent systems — from multi-agent LLM pipelines to production ML.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-node"></span>
+    <span class="loader-node"></span>
+    <span class="loader-node"></span>
+  </div>
+  <p class="loader-text">compiling_profile.py</p>
+</div>
+
+<!-- ===================== CUSTOM CURSOR / SCROLL PROGRESS ===================== -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===================== NAVIGATION ===================== -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo">Gokul<span>.M</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+      <li><a href="#github" class="nav-link" data-section="github">GitHub</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <a href="assets/resume/Gokul_M_Resume.pdf" download class="btn btn-ghost nav-resume-btn">Resume</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <canvas id="networkCanvas" class="network-canvas" aria-hidden="true"></canvas>
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1 class="hero-name reveal">Gokul M</h1>
+      <h2 class="hero-role reveal">
+        <span id="typingText"></span><span class="cursor-blink">|</span>
+      </h2>
+      <div class="hero-actions reveal">
+        <a href="assets/resume/Gokul_M_Resume.pdf" download class="btn btn-primary">Download Résumé</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/Gokulm29" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.96.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12.03C23.5 5.66 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/gokul-m-0505a4279" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.24 8.5h4.5V23H.24V8.5ZM8.5 8.5h4.31v1.98h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.85V23h-4.5v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V23H8.5V8.5Z"/></svg>
+        </a>
+        <a href="mailto:gokulmani200429@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm19.4 2.1-9.4 7.05L2.6 6.1v.02L12 13.5l9.4-7.38V6.1Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image reveal">
+      <div class="hero-image-glow" aria-hidden="true"></div>
+      <div class="hero-image-frame">
+        <img src="assets/images/profile1.jpg" alt="Gokul M" id="profileImg"
+             onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg';">
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-mouse"></span>
+    </a>
+  </div>
+</section>
+
+<main class="pipeline">
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="section-container">
+    <h2 class="section-title reveal">About Me</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm an AI &amp; Data Science graduate and Machine Learning Engineer passionate about building intelligent,
+          production-ready AI solutions that solve real-world problems. My expertise spans Machine Learning, Deep
+          Learning, Data Science, and Generative AI, with hands-on experience developing end-to-end AI applications
+          from data preprocessing and model training to deployment and optimization.
+        </p>
+
+        <p>
+          I've built AI-powered applications using Python, SQL, TensorFlow, Scikit-learn, Keras, Streamlit,
+          LangChain, and CrewAI, focusing on scalable, real-world solutions rather than just experiments. I'm
+          particularly interested in Large Language Models (LLMs), Retrieval-Augmented Generation (RAG),
+          multi-agent AI systems, and intelligent automation. I enjoy turning innovative ideas into impactful
+          products while continuously exploring emerging AI technologies and best practices.
+        </p>
+
+        <div class="info-card">
+          <h3>Interested Roles &amp; Preferred Locations</h3>
+          <div class="info-card-split">
+            <div class="info-card-col">
+              <h4>Interested Roles</h4>
+              <ul class="dot-list">
+                <li>AI/ML Engineer</li>
+                <li>Data Scientist</li>
+                <li>Generative AI Engineer</li>
+              </ul>
+            </div>
+            <div class="info-card-col">
+              <h4>Preferred Locations</h4>
+              <ul class="dot-list">
+                <li>Chennai</li>
+                <li>Bangalore</li>
+                <li>Coimbatore</li>
+                <li>Open to Relocation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-side reveal">
+        <div class="info-card">
+          <h3>Education</h3>
+          <ul class="edu-list">
+            <li>
+              <span class="edu-degree">B.Tech, Artificial Intelligence &amp; Data Science</span>
+              <span class="edu-school">Karpagam College of Engineering, Coimbatore</span>
+              <span class="edu-meta">2022 – 2026 · CGPA 7.60</span>
+            </li>
+            <li>
+              <span class="edu-degree">Higher Secondary Certificate</span>
+              <span class="edu-school">S.B.K Hr. Sec. School, State Board</span>
+              <span class="edu-meta">2022 · 56.67%</span>
+            </li>
+            <li>
+              <span class="edu-degree">Secondary School Leaving Certificate</span>
+              <span class="edu-school">S.B.K Hr. Sec. School, State Board</span>
+              <span class="edu-meta">2020 · 63.00%</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Currently</h3>
+          <ul class="dot-list">
+            <li>Currently studying Data Science Course at SLA Institution, Chennai</li>
+            <li>Building practical AI, Machine Learning, and Data Science projects</li>
+            <li>Improving my Python, SQL, Machine Learning, Deep Learning, and Generative AI skills</li>
+            <li>Preparing for placements and real-world AI development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="section" id="skills">
+  <div class="section-container">
+    <h2 class="section-title reveal">Skills &amp; Tools</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Languages</h3>
+        <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" data-level="92"></div></div></div>
+        <div class="skill-bar-item"><span>SQL</span><div class="bar"><div class="bar-fill" data-level="80"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Frameworks &amp; Libraries</h3>
+        <div class="skill-bar-item"><span>Scikit-learn</span><div class="bar"><div class="bar-fill" data-level="88"></div></div></div>
+        <div class="skill-bar-item"><span>TensorFlow / Keras</span><div class="bar"><div class="bar-fill" data-level="80"></div></div></div>
+        <div class="skill-bar-item"><span>Pandas / NumPy</span><div class="bar"><div class="bar-fill" data-level="90"></div></div></div>
+        <div class="skill-bar-item"><span>Streamlit</span><div class="bar"><div class="bar-fill" data-level="85"></div></div></div>
+        <div class="skill-bar-item"><span>Matplotlib / Seaborn</span><div class="bar"><div class="bar-fill" data-level="82"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">AI / ML &amp; NLP</h3>
+        <div class="skill-bar-item"><span>Regression &amp; Classification</span><div class="bar"><div class="bar-fill" data-level="88"></div></div></div>
+        <div class="skill-bar-item"><span>Clustering</span><div class="bar"><div class="bar-fill" data-level="80"></div></div></div>
+        <div class="skill-bar-item"><span>Text Preprocessing</span><div class="bar"><div class="bar-fill" data-level="78"></div></div></div>
+        <div class="skill-bar-item"><span>LangChain / CrewAI</span><div class="bar"><div class="bar-fill" data-level="82"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Deep Learning</h3>
+        <div class="skill-bar-item"><span>CNN</span><div class="bar"><div class="bar-fill" data-level="78"></div></div></div>
+        <div class="skill-bar-item"><span>RNN</span><div class="bar"><div class="bar-fill" data-level="72"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Data &amp; Vector Stores</h3>
+        <div class="skill-bar-item"><span>MongoDB</span><div class="bar"><div class="bar-fill" data-level="65"></div></div></div>
+        <div class="skill-bar-item"><span>FAISS / ChromaDB</span><div class="bar"><div class="bar-fill" data-level="75"></div></div></div>
+        <div class="skill-bar-item"><span>Tableau / Power BI</span><div class="bar"><div class="bar-fill" data-level="78"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Developer Tools &amp; Platforms</h3>
+        <div class="skill-bar-item"><span>Git / GitHub</span><div class="bar"><div class="bar-fill" data-level="88"></div></div></div>
+        <div class="skill-bar-item"><span>Docker</span><div class="bar"><div class="bar-fill" data-level="70"></div></div></div>
+        <div class="skill-bar-item"><span>Google Colab / VS Code</span><div class="bar"><div class="bar-fill" data-level="90"></div></div></div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3 class="skill-cat-title">Soft Skills</h3>
+        <div class="tag-list">
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Time Management</span>
+          <span class="tag">Adaptability</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section" id="projects">
+  <div class="section-container">
+    <h2 class="section-title reveal">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-media">
+          <div class="project-glyph">🕸️</div>
+        </div>
+        <div class="project-body">
+          <span class="project-date">Aug 2025 – Mar 2026</span>
+          <h3>AI-Powered Multi-Agent Procurement System</h3>
+          <p class="project-desc">
+            An end-to-end 12-agent system that automates the full procurement lifecycle for supply chains —
+            from demand forecasting to supplier decisions.
+          </p>
+          <ul class="project-features">
+            <li>ML-based demand forecasting with intelligent, inventory-aware replenishment</li>
+            <li>Automated supplier discovery, RFQ generation and quote analysis</li>
+            <li>LLM-based document verification and decisioning with PDF report generation</li>
+          </ul>
+          <div class="tag-list small">
+            <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">CrewAI</span>
+            <span class="tag">Groq API</span><span class="tag">Streamlit</span><span class="tag">FAISS</span>
+            <span class="tag">ChromaDB</span><span class="tag">ReportLab</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Gokulm29/supplymind" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-media">
+          <div class="project-glyph">🚚</div>
+        </div>
+        <div class="project-body">
+          <span class="project-date">Jan 2025</span>
+          <h3>Optimized Vehicle Routing using Genetic Algorithms</h3>
+          <p class="project-desc">
+            An optimization engine for the Vehicle Routing Problem that cut delivery routing cost by
+            <strong>25%</strong> using evolutionary search.
+          </p>
+          <ul class="project-features">
+            <li>Designed a genetic-algorithm-based optimizer for route planning</li>
+            <li>Reduced delivery routing cost by 25%</li>
+            <li>Improved overall logistics efficiency</li>
+          </ul>
+          <div class="tag-list small">
+            <span class="tag">Python</span><span class="tag">Genetic Algorithms</span><span class="tag">NumPy</span>
+            <span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Google Colab</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Gokulm29/Vehicle-Routing-Problem-Using-Machine-learning-Genetic-Algorithm-" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-media">
+          <div class="project-glyph">📦</div>
+        </div>
+        <div class="project-body">
+          <span class="project-date">Feb – Mar 2024</span>
+          <h3>MLOps for Predicting Job Placement</h3>
+          <p class="project-desc">
+            A containerized, end-to-end ML pipeline predicting job placement outcomes, deployed behind an
+            interactive interface.
+          </p>
+          <ul class="project-features">
+            <li>Data preprocessing, model training and evaluation pipeline</li>
+            <li>Containerized the application using Docker</li>
+            <li>Deployed an interactive prediction interface with Streamlit</li>
+          </ul>
+          <div class="tag-list small">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Docker</span>
+            <span class="tag">Streamlit</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Gokulm29" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-media">
+          <div class="project-glyph">⚽</div>
+        </div>
+        <div class="project-body">
+          <span class="project-date">May 2024</span>
+          <h3>FIFA Analytics Dashboard</h3>
+          <p class="project-desc">
+            An interactive football analytics dashboard surfacing player and team performance insights.
+          </p>
+          <ul class="project-features">
+            <li>Designed and built the dashboard end-to-end in Tableau</li>
+            <li>Enabled visual insights for player and team performance analysis</li>
+          </ul>
+          <div class="tag-list small">
+            <span class="tag">Tableau</span><span class="tag">Data Visualization</span><span class="tag">Dashboard Design</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Gokulm29/FIFA-DASHBOARD" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="section" id="experience">
+  <div class="section-container">
+    <h2 class="section-title reveal">Experience</h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Sep 2023 – Oct 2023</span>
+          <h3>Python Developer Intern</h3>
+          <p class="timeline-org">Octanet Services</p>
+          <ul class="dot-list">
+            <li>Designed and implemented an ATM Management System using Python and OOP principles</li>
+            <li>Improved transaction flow and overall system performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section class="section" id="certifications">
+  <div class="section-container">
+    <h2 class="section-title reveal">Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <h3>Python Development Internship</h3>
+        <p class="cert-issuer">Octanet Services</p>
+        <p class="cert-date">Oct 2023</p>
+      </div>
+      <div class="cert-card reveal">
+        <h3>Data Analytics With Python</h3>
+        <p class="cert-issuer">NPTEL</p>
+        <p class="cert-date">Apr 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <h3>Data Visualization with Power BI</h3>
+        <p class="cert-issuer">Great Learning</p>
+        <p class="cert-date">Aug 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <h3>Introduction to MongoDB</h3>
+        <p class="cert-issuer">MongoDB</p>
+        <p class="cert-date">Sep 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <h3>Business Analysts Qualification</h3>
+        <p class="cert-issuer">Qlik Sense</p>
+        <p class="cert-date">Oct 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section class="section" id="achievements">
+  <div class="section-container">
+    <h2 class="section-title reveal">Achievements</h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal">
+        <div class="achieve-icon">⚙️</div>
+        <h3>12-Agent System Shipped</h3>
+        <p>Designed and orchestrated a 12-agent LLM pipeline automating the full procurement lifecycle.</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-icon">📉</div>
+        <h3>25% Cost Reduction</h3>
+        <p>Cut delivery routing cost by a quarter using a genetic-algorithm-based optimizer for the VRP.</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-icon">🎓</div>
+        <h3>5 Professional Certifications</h3>
+        <p>Completed certifications spanning Python, data analytics, Power BI, MongoDB and business analytics.</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-icon">🚀</div>
+        <h3>4 End-to-End Deployments</h3>
+        <p>Shipped ML systems from notebook to interface — containerized, deployed and demo-ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GITHUB STATS ===================== -->
+<section class="section" id="github">
+  <div class="section-container">
+    <h2 class="section-title reveal">GitHub Activity</h2>
+    <p class="section-sub reveal">Live stats pulled from <a href="https://github.com/Gokulm29" target="_blank" rel="noopener">github.com/Gokulm29</a></p>
+
+    <div class="github-grid">
+      <div class="github-card reveal wide">
+        <img loading="lazy" src="https://streak-stats.demolab.com/?user=Gokulm29&theme=dark&hide_border=true&background=10162A&ring=D4A15D&fire=D4A15D&currStreakLabel=E7E9EE" alt="Gokul's GitHub streak" onerror="this.parentElement.innerHTML='<p class=&quot;github-fallback&quot;>Streak stats temporarily unavailable — view live activity on <a href=&quot;https://github.com/Gokulm29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>GitHub</a>.</p>'">
+      </div>
+      <div class="github-card reveal">
+        <img loading="lazy" src="https://github-readme-activity-graph.vercel.app/graph?username=Gokulm29&theme=react-dark&bg_color=10162A&color=E7E9EE&line=D4A15D&point=6C7CE0&hide_border=true" alt="Gokul's contribution graph" onerror="this.parentElement.innerHTML='<p class=&quot;github-fallback&quot;>Contribution graph temporarily unavailable — view live activity on <a href=&quot;https://github.com/Gokulm29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>GitHub</a>.</p>'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="section-container">
+    <h2 class="section-title reveal">What I Can Do</h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🤖</div>
+        <h3>ML Model Development</h3>
+        <p>Regression, classification and clustering models built, tuned and validated for real-world data.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🧠</div>
+        <h3>Multi-Agent LLM Systems</h3>
+        <p>Agentic pipelines with LangChain and CrewAI — orchestration, retrieval and tool-use included.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔁</div>
+        <h3>MLOps &amp; Deployment</h3>
+        <p>Containerized, production-ready pipelines from raw data to a deployed, interactive interface.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📊</div>
+        <h3>Data Analysis &amp; Visualization</h3>
+        <p>SQL-driven analysis and dashboards in Tableau or Power BI that surface decisions, not just charts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section" id="contact">
+  <div class="section-container">
+    <h2 class="section-title reveal">Let's Build Something</h2>
+    <p class="section-sub reveal">Open to ML engineering, data science and data engineering roles &amp; collaborations.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:gokulmani200429@gmail.com">gokulmani200429@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+918098403166">+91 80984 03166</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <span>Chennai, Tamil Nadu, India</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Elsewhere</span>
+          <div class="contact-social-row">
+            <a href="https://github.com/Gokulm29" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://linkedin.com/in/gokul-m-0505a4279" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=Chennai%2C%20Tamil%20Nadu&t=&z=10&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="220" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Map showing Chennai, Tamil Nadu">
+          </iframe>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          <span class="form-error" id="subjectError"></span>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me a bit more..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo">Gokul<span>.M</span></a>
+      <p>Machine Learning Engineer &amp; Data Scientist, Chennai, India.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Elsewhere</h4>
+      <div class="footer-social-icons">
+        <a href="https://github.com/Gokulm29" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.96.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12.03C23.5 5.66 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/gokul-m-0505a4279" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.24 8.5h4.5V23H.24V8.5ZM8.5 8.5h4.31v1.98h.06c.6-1.13 2.06-2.32 4.24-2.32 4.53 0 5.37 2.98 5.37 6.85V23h-4.5v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V23H8.5V8.5Z"/></svg>
+        </a>
+        <a href="mailto:gokulmani200429@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm19.4 2.1-9.4 7.05L2.6 6.1v.02L12 13.5l9.4-7.38V6.1Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Gokul M. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script src="js/typing.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

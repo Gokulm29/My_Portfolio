@@ -1,0 +1,69 @@
+/* =========================================================
+   animations.css — keyframes, reveal states, hover motion
+   ========================================================= */
+
+/* ---------- Scroll reveal ---------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children within a grid slightly via nth-child delay classes set in JS */
+.reveal.delay-1{ transition-delay: .08s; }
+.reveal.delay-2{ transition-delay: .16s; }
+.reveal.delay-3{ transition-delay: .24s; }
+.reveal.delay-4{ transition-delay: .32s; }
+
+/* ---------- Loader ---------- */
+@keyframes loaderPulse{
+  0%, 100%{ transform: scale(1); opacity: .5; }
+  50%{ transform: scale(1.4); opacity: 1; }
+}
+
+/* ---------- Hero ---------- */
+@keyframes blink{
+  0%, 100%{ opacity: 1; }
+  50%{ opacity: 0; }
+}
+@keyframes scrollDot{
+  0%{ top: 6px; opacity: 1; }
+  70%{ top: 20px; opacity: 0; }
+  71%{ top: 6px; opacity: 0; }
+  100%{ top: 6px; opacity: 1; }
+}
+
+/* ---------- Hero profile image ---------- */
+@keyframes heroFloat{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-14px); }
+}
+@keyframes heroGlow{
+  0%, 100%{ opacity: 0.7; transform: scale(1); }
+  50%{ opacity: 1; transform: scale(1.08); }
+}
+
+/* ---------- Floating glyphs on project media ---------- */
+.project-glyph{
+  animation: floaty 4.5s ease-in-out infinite;
+}
+@keyframes floaty{
+  0%, 100%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-8px) rotate(3deg); }
+}
+
+/* ---------- Achievement / service icon hover ---------- */
+.achieve-icon, .service-icon{ transition: transform .35s var(--ease); display: inline-block; }
+.achieve-card:hover .achieve-icon, .service-card:hover .service-icon{ transform: scale(1.15) rotate(-4deg); }
+
+/* ---------- Nav underline entrance ---------- */
+.navbar{ animation: navDrop .6s var(--ease) both; }
+@keyframes navDrop{
+  from{ transform: translateY(-100%); }
+  to{ transform: translateY(0); }
+}
+
+
