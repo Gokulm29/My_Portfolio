@@ -6,7 +6,7 @@
     "Machine Learning Engineer",
     "Data Scientist",
     "Data Engineer",
-    "Multi-Agent LLM Builder"
+    "Generative AI Engineer"
   ];
 
   const el = document.getElementById("typingText");
