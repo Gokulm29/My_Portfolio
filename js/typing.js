@@ -3,9 +3,8 @@
    ========================================================= */
 (function () {
   const roles = [
+    "AI/ML Engineer",
     "Machine Learning Engineer",
-    "Data Scientist",
-    "Data Engineer",
     "Generative AI Engineer"
   ];
 
